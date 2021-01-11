@@ -1,0 +1,71 @@
+﻿
+@{
+    Layout = null;
+}
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Bloga Xoş Gəlmisiniz</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="~/web/js/jquery.min.js"></script>
+    <link href="~/web/css/slider.css" rel="stylesheet" />
+    <link href="~/web/css/style.css" rel="stylesheet" />
+    <script src="~/web/js/responsiveslides.min.js"></script>
+    <script>
+        // You can also use "$(window).load(function() {"
+        $(function () {
+            // Slideshow 1
+            $("#slider1").responsiveSlides({
+                auto: true,
+                nav: true,
+                speed: 500,
+                namespace: "callbacks",
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="wrap">
+            <div class="logo"><p style="font-size:34px;color:powderblue">My Blog</p></div>
+            <div class="con-right">
+                <div class="grid1-l-img">
+                    <img src="~/web/images/contact.png" />
+                </div>
+                <div class="grid1-l-desc">
+                    <p>Contact : smrquluzade@gmail.com</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <div class="wrap">
+            <ul id="nav">
+                <li style="margin-left:100px"><a href="/Default/Index/">Home</a></li>
+                <li style="margin-left:100px"><a class="hsubs" href="/Blog/Index/">Blog</a></li>
+                <li style="margin-left:100px"><a href="/Default/Contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class"content">
+        @RenderBody()
+    </div>
+    <div class="footer-bottom">
+        <div class="wrap">
+            <div class="copy">
+               
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

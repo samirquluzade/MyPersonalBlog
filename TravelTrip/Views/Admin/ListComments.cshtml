@@ -1,0 +1,30 @@
+﻿@using TravelTrip.Models.Classes
+@model List<Comments>
+@{
+    ViewBag.Title = "ListComments";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h2>Comments List</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Mail</th>
+        <th>Comment</th>
+        <th>BlogID</th>
+        <th>Delete</th>
+        <th>Update</th>
+    </tr>
+    @foreach(var x in Model)
+    {
+<tr>
+    <td>@x.Id</td>
+    <td>@x.UserName</td>
+    <td>@x.Mail</td>
+    <td>@x.Comment</td>
+    <td>@x.Blog.Header</td>
+    <td><a href="/Admin/DeleteComment/@x.Id">Delete</a></td>
+    <td><a href="/Admin/ShowComment/@x.Id">Update</a></td>
+</tr>
+    }
+</table>

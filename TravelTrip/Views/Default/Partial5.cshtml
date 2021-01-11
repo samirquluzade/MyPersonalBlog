@@ -1,0 +1,18 @@
+﻿@using TravelTrip.Models.Classes
+@model List<TravelTrip.Models.Blog>
+<div class="box1-left">
+    @foreach (var x in Model)
+    {
+        <a href="/Blog/BlogDetal/@x.Id">
+            <div class="bot-img">
+                <img src="~/@x.BlogImage" />
+            </div>
+            <div class="bot-desc1">
+                <p>@Html.Raw(x.Description.Substring(0, 50))
+                ...
+                </p>
+            </div>
+            <div class="clear"></div>
+            </a>
+            }
+    </div>
